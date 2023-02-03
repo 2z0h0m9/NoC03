@@ -13,9 +13,8 @@ script.registerModule({
 }, function (module) {
 	module.on("enable", function(event) {
 		var packet = event.getPacket();
-			if (packet instanceof CPacketPlayer){
-				event.cancelEvent()
-			}
+		if (packet instanceof CPacketPlayer){
+			event.cancelEvent()
 		}
-	)
+	})
 });
