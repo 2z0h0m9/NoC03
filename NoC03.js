@@ -11,8 +11,7 @@ script.registerModule({
     category: "Misc",
     description: "noc03"
 }, function (module) {
-	module.on("enable",
-	function(event) {
+	module.on("enable", function(event) {
 		var packet = event.getPacket();
 			if (packet instanceof CPacketPlayer){
 				event.cancelEvent()
