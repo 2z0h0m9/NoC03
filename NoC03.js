@@ -3,7 +3,7 @@ var CPacketPlayer = Java.type("net.minecraft.network.play.client.CPacketPlayer")
 var script = registerScript({
     name: "NoC03",
     version: "1.0.0",
-    authors: ["Messenger", "2z0h0m9"]
+    authors: ["2z0h0m9"]
 });
 
 script.registerModule({
@@ -11,7 +11,7 @@ script.registerModule({
     category: "Misc",
     description: "noc03"
 }, function (module) {
-	module.on("enable", function(event) {
+	module.on("packet", function(event) {
 		var packet = event.getPacket();
 		if (packet instanceof CPacketPlayer){
 			event.cancelEvent()
